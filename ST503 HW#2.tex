@@ -210,8 +210,7 @@ Four. This can be seen by inspection, since the first column is the sum of the l
 \noindent\textbf{\boldmath{b. Write the normal equations. Explain why the normal equations have infinitely many solutions.}}
 \vspace{\baselineskip}
 
-xxxxxxx
-In general, the normal equation is $(X^TX)\beta=X^T y$. Since $X$ has less than full column rank (by part a), $X^TX$ is not invertible. We must then use a generalized inverse to arrive at our estimate, $\samp{\beta}=(X^TX)^-X^T y$. While $(X^TX)^-$ is not unique, $\samp{\beta}$ is.
+In general, the normal equation is $(X^TX)\beta=X^T y$. Since $X$ has less than full column rank (by part a), $X^TX$ is not invertible. We must then use a generalized inverse $(X^TX)^-$ to arrive at our estimate, $\samp{\beta}=(X^TX)^-X^T y$. And while $(X^TX)^-$ is not unique, $\samp{\beta}$ is.
 
 
 \vspace{\baselineskip}
@@ -321,6 +320,22 @@ Since male/female is binary (female is coded as `1'), if all other predictors ar
 \noindent\textbf{\boldmath{3) The dataset `uswages' is drawn as a sample from the Current Population Survey in 1988. Fit a model with weekly wages as the resopnse and years of education and experience as predictors. Report and give a simple interpretation to the regression coefficient for years of education. Now fit the same model but with logged weekly wages. Give an interpretation to the regression coefficient for years of education. Which interpretation is more natural?}}
 \vspace{\baselineskip}
 
+The model for the predicted weekly wages is approximately \$50 for every year of education plus \$10 for every year of experience, less about \$240. More specifically, the linear model predicts that with every additional year of education, one would be expected to earn an additional \$51.18 a week (in 1992 dollars, deflated by PCE inflation).
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{Wage Regression}
+\end{figure}
+
+In contrast, the same model but with logged weekly wages predicts every additional year of education would be expected to net a person about \$0.09 log-dollars a week. While there is some argument to be made that the positive intercept in the log model makes an interpretation at the extremes more reasonable, in total, the interpretation makes more since when the prediction isn't logged.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{Log Wage Regression}
+\end{figure}
+
+
 
 
 \newpage
@@ -328,15 +343,31 @@ Since male/female is binary (female is coded as `1'), if all other predictors ar
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm]{R Code 1}
+	\includegraphics[width=14cm]{Gambling R Code 1}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm]{R Code 2}
+	\includegraphics[width=14cm]{Gambling R Code 2}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm]{R Code 3}
+	\includegraphics[width=14cm]{Gambling R Code 3}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{Gambling R Code 4}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{Gambling R Code 5}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{Gambling R Code 6}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{Gambling R Code 7}
 \end{figure}
 
 
